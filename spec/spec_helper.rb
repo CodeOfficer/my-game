@@ -8,3 +8,7 @@ Dir[File.dirname(__FILE__) + '/../lib/*.rb'].each {|file| require file }
 __END__
 
 Nothing below this line will get run. Wicked cool!
+
+rspec cheat sheet:
+
+http://cheat.errtheblog.com/s/rspec/
