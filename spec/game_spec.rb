@@ -1,6 +1,6 @@
 require File.expand_path(File.join('.', 'spec_helper'), File.dirname(__FILE__))
 
-describe Game, "When I create a game, it" do
+describe Game, "A game" do
     
   before(:each) do
     @game = Game.new
@@ -11,7 +11,7 @@ describe Game, "When I create a game, it" do
     @game.running.should == true
   end
   
-  context "has a map and ... " do
+  context "with maps" do
     
     before(:each) do
       @map = Map.new
@@ -19,9 +19,10 @@ describe Game, "When I create a game, it" do
     
     it "should have a map" do
       @game.add_map(@map) do |map|
-        # ...
+        map.place(0, 5, @player)
       end
-      @game.map.should be_an_instance_of Map
+      @game.maps[0].should be_an_instance_of( Map )
+      @game.maps.should include( @map )
     end
     
   end
