@@ -1,6 +1,6 @@
 require File.expand_path(File.join('.', 'spec_helper'), File.dirname(__FILE__))
 
-describe Matrix, "When I create a matrix, it" do
+describe Matrix do
   
   before(:each) do
     @matrix = Matrix.new(5, 5)

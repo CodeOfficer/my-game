@@ -30,7 +30,7 @@ class Matrix
   
   def to_s
     str = @data.inject('') do |result, row| 
-      result + row.collect {|x| x.class.to_s }.join(' ') + "\n"
+      result + row.collect {|x| x.to_s }.join(' ') + "\n"
     end
     puts "\n#{str}"
   end

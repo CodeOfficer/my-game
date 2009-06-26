@@ -9,12 +9,11 @@ class Game
   end
   
   def run
-    @running = true    
+    @running = true
+    while @running
+      break
+    end
   end
-  
-  # @game.add_map(@map) do |map|
-  #   map.place(0, 5, @player)
-  # end
   
   def add_map(map, &block)
     yield map if block_given?
