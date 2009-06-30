@@ -6,12 +6,12 @@ describe Game do
     @game = Game.new
   end
 
-  it "should be running" do
+  it "should be running" do 
     @game.run
     @game.running.should == true
   end
   
-  describe "with maps" do
+  context "with maps" do
     
     before(:each) do
       @map = Map.new('001')

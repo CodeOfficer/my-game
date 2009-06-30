@@ -1,6 +1,6 @@
 require File.expand_path(File.join('.', 'spec_helper'), File.dirname(__FILE__))
 
-describe Unit do
+describe BaseUnit do
   
   before(:each) do
   end

@@ -28,7 +28,7 @@ describe Map do
           ggpgggwwff
         END
       end
-      puts @map.terrain.to_s 
+      # puts @map.terrain.to_s 
     end
     
     it "should have a minimum width and height" do

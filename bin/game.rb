@@ -2,13 +2,10 @@ require "rubygems"
 require "pp"
 
 Dir.glob(File.join(File.dirname(__FILE__), '../lib/*.rb')).each {|f| require f }
-
-
-
+CONFIG = YAML.load_file(File.dirname(__FILE__) + '/../config/maps.yml')['legend']
 
 
 game = Game.new
-
 map = Map.new
 
 game.add_map(map) do |map|
