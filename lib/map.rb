@@ -4,23 +4,15 @@
 
 class Map
   
-  attr_accessor :units
-  attr_accessor :terrain
+  attr_reader :units
+  attr_reader :terrain
   attr_reader :width, :height
-  
+
   def initialize(map_name, &block)
     if block_given?
       rows = yield(block)
     else
-      # todo: read from file?
-      rows = <<-END
-          gggggggggg
-          gggggggwww
-          ggggggwwff
-          gggppppppp
-          ggppggwfpf
-          ggpgggwwff
-        END
+      rows = File.open(File.dirname(__FILE__) + "/../maps/#{map_name}.txt", "r").read
     end
      
     rows = rows.split("\n")

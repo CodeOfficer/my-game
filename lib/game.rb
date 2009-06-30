@@ -16,7 +16,7 @@ class Game
   end
   
   def add_map(map, &block)
-    yield map if block_given?
+    yield map if block_given? # yeild to make so stuff can be added?
     @maps.push(map)
   end
   
