@@ -1,11 +1,8 @@
 require "rubygems"
-require 'test/unit'
 require "spec"
 require "pp"
 
-Dir[File.dirname(__FILE__) + '/../lib/*.rb'].each {|file| require file }
-
-CONFIG = YAML.load_file(File.dirname(__FILE__) + '/../config/maps.yml')['legend']
+require File.dirname(__FILE__) + '/../config/environment'
 
 __END__
 

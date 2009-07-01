@@ -1,9 +1,13 @@
+#!/usr/bin/env ruby
+
+
 require "rubygems"
+require File.dirname(__FILE__) + '/../config/environment'
 require "pp"
-require "../config/environment"
+
 
 game = Game.new
-map = Map.new
+map = Map.new('001')
 
 game.add_map(map) do |map|
   # map.place(3, 0, nathan)
