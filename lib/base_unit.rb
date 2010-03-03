@@ -1,19 +1,19 @@
+puts "loading base_unit.rb"
+
 class BaseUnit
-  
+
   attr_reader :name
-  attr_reader :player
-  
-  def initialize(player, name) 
-    @player = player
+
+  def initialize(name)
     @name = name
   end
 
 end
 
 class GeekUnit <  BaseUnit
-  
+
 end
 
 class NerdUnit <  BaseUnit
-  
+
 end

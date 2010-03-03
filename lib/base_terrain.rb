@@ -1,11 +1,13 @@
+puts "loading base_terrain.rb"
+
 class BaseTerrain
-  
+
   attr_reader :name
-  
+
   def initialize(name)
     @name = name
   end
-  
+
 end
 
 class ForestTerrain < BaseTerrain

@@ -1,3 +1,4 @@
+puts "loading spec_helper.rb"
 require "rubygems"
 require "spec"
 require "pp"

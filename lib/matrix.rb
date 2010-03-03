@@ -1,5 +1,6 @@
+puts "loading matrix.rb"
 
-# matrix = Matrix.new(2, 2) 
+# matrix = Matrix.new(2, 2)
 # p matrix.all_positions #=> [[0, 0], [1, 0], [0, 1], [1, 1]]
 
 class Matrix
@@ -11,15 +12,15 @@ class Matrix
       @data[y] = Array.new(cols)
     end
   end
-  
+
   def [](x, y)
     @data[y][x]
   end
-  
+
   def []=(x, y, value)
     @data[y][x] = value
   end
-  
+
   # def all_positions
   #   (0...@rows).collect do |y|
   #     (0...@cols).collect do |x|
@@ -27,14 +28,14 @@ class Matrix
   #     end
   #   end.inject([]) { |a, b| a.concat b }
   # end
-  
+
   def to_s
-    str = @data.inject('') do |result, row| 
+    str = @data.inject('') do |result, row|
       result + row.collect {|x| x.to_s }.join(' ') + "\n"
     end
     puts "\n#{str}"
   end
-  
+
   # def rep
   #   @data.collect do |row|
   #     row.collect do |item|
