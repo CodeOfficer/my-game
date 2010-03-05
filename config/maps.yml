@@ -1,6 +1,3 @@
 legend:
-    f: Forest
-    g: Grass
-    m: Mountains
-    p: Plains
-    w: Water
+    g: Ground
+    p: Path

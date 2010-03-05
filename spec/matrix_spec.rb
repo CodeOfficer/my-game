@@ -1,9 +1,9 @@
-require File.expand_path(File.join('.', 'spec_helper'), File.dirname(__FILE__))
+require File.dirname(__FILE__) + '/spec_helper'
 
-describe Matrix do
-  
+describe TowerDefence::Matrix do
+
   before(:each) do
-    @matrix = Matrix.new(5, 5)
+    @matrix = TowerDefence::Matrix.new(5, 5)
   end
 
   it "should assign and read values via [x,x]" do
