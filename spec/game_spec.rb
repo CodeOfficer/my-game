@@ -24,4 +24,8 @@ describe TowerDefence::Game do
     @game.maps.size.should == 2
   end
 
+  it "should have a current map" do
+    @game.map.should be_an_instance_of(TowerDefence::Map)
+  end
+
 end

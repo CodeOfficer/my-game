@@ -7,12 +7,15 @@ module TowerDefence
     attr_reader :units
     attr_reader :terrain
     attr_reader :width, :height
+    attr_reader :name
 
-    def initialize(map_name, &block)
+    def initialize(name, &block)
       if block_given?
         map = yield(block)
+        @name = 'custom'
       else
-        path = File.dirname(__FILE__) + "/../../maps/#{map_name}.txt"
+        @name = name
+        path = File.dirname(__FILE__) + "/../../maps/#{name}.txt"
         map = File.open(path, "r").read
       end
       rows = parse_rows(map)

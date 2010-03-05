@@ -13,6 +13,10 @@ describe TowerDefence::Map do
       @map.height.should > 1
     end
 
+    it "should have a name" do
+      @map.name.should == "001"
+    end
+
   end
 
   context "with a custom map" do

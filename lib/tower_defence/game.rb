@@ -7,12 +7,13 @@ module TowerDefence
     attr_reader :run_state
     attr_reader :maps
     attr_reader :player
+    attr_reader :map
 
     def initialize
-      @player = TowerDefence::Player.new
+      @player    = TowerDefence::Player.new
       @run_state = false
-      @maps = []
-      load_maps
+      @maps      = load_maps
+      @map       = @maps.first
     end
 
     def run(run_state = true)
@@ -25,8 +26,10 @@ module TowerDefence
   private
 
     def load_maps
-      @maps << TowerDefence::Map.new('001')
-      @maps << TowerDefence::Map.new('002')
+      maps = []
+      maps << TowerDefence::Map.new('001')
+      maps << TowerDefence::Map.new('002')
+      maps
     end
 
   end
