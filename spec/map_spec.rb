@@ -35,6 +35,10 @@ describe TowerDefence::Map do
       # puts @map.terrain.to_s
     end
 
+    it "should have a name" do
+      @map.name.should == "custom label"
+    end
+
     it "should have a minimum width and height" do
       @map.width.should > 1
       @map.height.should > 1
