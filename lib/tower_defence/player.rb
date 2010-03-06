@@ -1,5 +1,3 @@
-puts "loading player.rb"
-
 module TowerDefence
 
   class Player

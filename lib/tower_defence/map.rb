@@ -1,5 +1,3 @@
-puts "loading map.rb"
-
 module TowerDefence
 
   class Map
@@ -35,8 +33,8 @@ module TowerDefence
     end
 
     def to_s
-      puts "UNITS"
-      puts @units.to_s
+      # puts "UNITS"
+      # puts @units.to_s
       puts "TERRAIN"
       puts @terrain.to_s
     end

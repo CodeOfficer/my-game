@@ -1,5 +1,3 @@
-puts "loading game.rb"
-
 module TowerDefence
 
   class Game

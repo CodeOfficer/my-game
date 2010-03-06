@@ -3,7 +3,7 @@ require "rubygems"
 require "spec"
 require "pp"
 
-require File.dirname(__FILE__) + '/../config/environment'
+require File.expand_path('../../config/environment', __FILE__)
 
 __END__
 
