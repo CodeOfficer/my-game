@@ -12,12 +12,11 @@ module TowerDefence
     def initialize(name, &block)
       if block_given?
         map = yield(block)
-        @name = 'custom'
       else
-        @name = name
         path = File.dirname(__FILE__) + "/../../maps/#{name}.txt"
         map = File.open(path, "r").read
       end
+      @name = name
       rows = parse_rows(map)
       @height = rows.size
       @width = rows[0].size
